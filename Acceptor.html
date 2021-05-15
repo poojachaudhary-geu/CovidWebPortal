@@ -3,23 +3,22 @@
     <style>
         body {
   margin: auto;
-  background: #eaeaea;  
+  background: #def5f5;  
   font-family: 'Open Sans', sans-serif;
 }
 .nof{
-    background-color: rgb(115, 57, 156);
+    background-color: #10808A;
   color: white;
   height: 8px;
   width: 8px;
   padding: 2px;
-  
-  border-radius: 5px;
+  border-radius: 2px;
   cursor: pointer;
   margin-top: 3px;
 }
 .info p {
   text-align:center;
-  color: #999;
+  color: #3f4383;
   text-transform:none;
   font-weight:600;
   font-size:15px;
@@ -27,11 +26,11 @@
 }
 
 .info i {
-  color:#F6AA93;
+  color:#f0967b;
 }
 form h1 {
   font-size: 18px;
-  background: #F6AA93 none repeat scroll 0% 0%;
+  background: #10808A none repeat scroll 0% 0%;
   color: rgb(255, 255, 255);
   padding: 22px 25px;
   border-radius: 5px 5px 0px 0px;
@@ -42,9 +41,9 @@ form h1 {
 
 form {
   border-radius: 5px;
-  max-width:700px;
+  max-width:800px;
   width:100%;
-  margin: 5% auto;
+  margin: 1% auto;
   background-color: #FFFFFF;
   overflow: hidden;
 }
@@ -62,17 +61,17 @@ p {
 
 h1 {
   text-align:center; 
-  color: #666;
+  color: #3f4383;
   text-shadow: 1px 1px 0px #FFF;
   margin:50px 0px 0px 0px
 }
 
 input {
-  border-radius: 5px 5px 5px 5px;
+  border-radius: 0px 5px 5px 0px;
   border: 1px solid #eee;
   margin-bottom: 15px;
   width: 41%;
-  height: 40px;
+  height: 30px;
   float: left;
 }
 
@@ -100,7 +99,7 @@ textarea {
   float: left;
   border-radius: 5px 0px 0px 5px;
   background:#eeeeee;
-  height:42px;
+  height:33px;
   position: relative;
   text-align: center;
   line-height:40px;
@@ -108,6 +107,7 @@ textarea {
 
 i {
   color:#555;
+
 }
 
 .contentform {
@@ -115,7 +115,21 @@ i {
 }
 
 .bouton-contact{
-  background-color: #81BDA4;
+  background-color: #10808A;
+  color: #FFF;
+  text-align: center;
+  width: 100%;
+  border:0;
+  padding: 17px 25px;
+  border-radius: 0px 0px 5px 5px;
+  cursor: pointer;
+  margin-top: 40px;
+  font-size: 18px;
+}
+
+.bouton-contact:hover{
+  transition: all .3s cubic-bezier(.19,1,.22,1);
+  background-color: #333;
   color: #FFF;
   text-align: center;
   width: 100%;
@@ -170,38 +184,38 @@ i {
 }
     </style>
     <head>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
             <h1>HANG IN THERE</h1>
-         <div class="info"><a target="_blank"><p> Everything will be <i class="fa fa-heart"></i> OKAY! </p></a></div>
+         <div class="info"><a target="_blank"><p> Everything will be <i class="fa fa-heart" style="font-size:25px; color:red;" ></i> OKAY! </p></a></div>
         
-        <form>
+        <form method="POST">
               <h1>Stay Safe. Better days are on their way.</h1>
               
           <div class="contentform">
               <div id="sendmessage"> Your message has been sent successfully. Thank you. </div>
-      
-      
               <div class="leftcontact">
                         <div class="form-group">
                           <p>Name<span>*</span></p>
-                          <span class="icon-case"><i class="fa fa-male"></i></span>
-                              <input type="text" name="nom" id="nom" data-rule="required" data-msg="Vérifiez votre saisie sur les champs : Le champ 'Nom' doit être renseigné."/>
-                      <div class="validation"></div>
+                          <span class="icon-case"><i class="fa fa-male" style="font-size:25px";></i></span>
+                              <input type="text" name="nom" id="nom" data-rule="required"/>
+                              <div class="validation"></div>
              </div> 
       
-                  <div class="form-group" style="height: 60px; margin-top: 3px; margin-bottom: 20px;">
+                  <div class="form-group" style="height: 70px; margin-top: 3px; margin-bottom: 20px;">
                   <p>Blood Group <span>*</span></p>
-                  <select id="cars" name="cars" style="border-radius: 15px 20px 30px 25px;">
-                    <option value="A">A</option>
-                    <option value="B">B</option>
-                    <option value="AB">AB</option>
-                    <option value="O">O</option>
+                  <select id="blood group" name="bloodgroup" style="border-radius: 5px ;height:30px; width: 80px;">
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B">B+</option>
+                    <option value="B">B-</option>
+                    <option value="AB">AB+</option>
+                    <option value="AB">AB-</option>
+                    <option value="O">O+</option>
+                    <option value="AB">O-</option>
                   </select>
-                  <select id="cars" name="cars" style="border-radius: 15px 20px 30px 25px; margin-left: 15px;">
-                    <option value="+">+</option>
-                    <option value="-">-</option>
-                  </select>
+                  
                       <div class="validation"></div>
                   </div>
       
@@ -213,17 +227,17 @@ i {
       
                   <div class="form-group">
                   <p>Gender <span>*</span></p>
-                  <select id="gender" name="gender" style="border-radius: 15px 20px 30px 25px; margin-bottom: 20px; margin-top: 3px;">
-                    <option value="MALE">MALE</option>
-                    <option value="FEMALE">FEMALE</option>
-                    <option value="OTHERS">OTHERS</option>
+                  <select id="gender" name="gender" style="border-radius: 5px; margin-bottom: 20px; margin-top: 3px; height:30px;">
+                    <option value="MALE">Male</option>
+                    <option value="FEMALE">Female</option>
+                    <option value="OTHERS">Others</option>
                   </select>
                       <div class="validation"></div>
                   </div>
       
                   <div class="form-group">
                   <p> State<span>*</span></p>
-                  <select name="state" id="state" style=" margin-bottom: 20px; width: 45%; border-radius: 10px; margin-top: 3px;">
+                  <select name="state" id="state" style=" margin-bottom: 20px; width: 45%; border-radius: 5px; margin-top: 3px;height:30px;">
                     <option value="Andhra Pradesh">Andhra Pradesh</option>
                     <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
                     <option value="Arunachal Pradesh">Arunachal Pradesh</option>
@@ -265,52 +279,52 @@ i {
       
                   <div class="form-group">
                   <p>City <span>*</span></p>
-                  <span class="icon-case"><i class="fa fa-map-marker"></i></span>
-                      <input type="text" name="postal" id="postal" data-rule="required" data-msg="Vérifiez votre saisie sur les champs : Le champ 'Code postal' doit être renseigné."/>
-                      <div class="validation"></div>
+                  <span class="icon-case"><i class="fa fa-map-marker" style="font-size:25px"></i></span>
+                      <input type="text" name="postal" id="postal" data-rule="required"/>
                   </div>	
       
       
       
           </div>
-      
           <div class="rightcontact">	
-      
-                  <div class="form-group">
-                  <p>Hospital's Name <span>*</span></p>
-                  <span class="icon-case"><i class="fa fa-building-o"></i></span>
-                      <input type="text" name="ville" id="ville" data-rule="required" data-msg="Vérifiez votre saisie sur les champs : Le champ 'Ville' doit être renseigné."/>
-                      <div class="validation"></div>
-                  </div>	
-      
-                  <div class="form-group">
-                  <p>Doctor's Name <span>*</span></p>	
-                  <span class="icon-case"><i class="fa fa-phone"></i></span>
-                      <input type="text" name="phone" id="phone" data-rule="maxlen:10" data-msg="Vérifiez votre saisie sur les champs : Le champ 'Téléphone' doit être renseigné. Minimum 10 chiffres"/>
-                      <div class="validation"></div>
-                  </div>
-                  <div class="form-group">
-                  <p style="margin-top:8px; margin-bottom: 10px;">Upload Patient's Covid Positive Report <span>*</span></p>	
-                    <input type="file" id="reportFile" name="reportfilename" style="border: #ffffff; width: 80%; padding-top: 10px;" hidden>
-                    <label class="nof" for="reportFile">Choose File</label>  
-                    <br> 
-                    <div class="validation"></div>
-                  </div>
-              
-                  <div class="form-group">
-                    <p style="margin-top:8px; margin-bottom: 10px;">Upload Doctor's Prescription <span>*</span></p>	
-                      <input type="file" id="prescriptionfile" name="prescriptionfilename" style="border: #ffffff; width: 80%; padding-top: 10px;" hidden>
-                      <label class="nof" for="prescriptionfile">Choose File</label> 
-                      <br>
-                       <div class="validation"></div>
-                    </div>	
                     <div class="form-group">
+
                         <p>Contact Number <span>*</span></p>
-                        <span class="icon-case"><i class="fa fa-info"></i></span>
+                        <span class="icon-case"><i class="fa fa-phone" style="font-size:25px"></i></span>
                         <input type="tel" id="fonction" name="fonction" class='input-field' pattern="(0/91)?[7-9][0-9]{9}">
                             <div class="validation"></div>
                         </div>
-            
+                        
+                        <div class="form-group">
+                            <p>Hospital's Name <span>*</span></p>
+                            <span class="icon-case"><i class="fa fa-building-o" style="font-size:25px"></i></span>
+                                <input type="text" name="ville" id="ville" data-rule="required" data-msg="Vérifiez votre saisie sur les champs : Le champ 'Ville' doit être renseigné."/>
+                                <div class="validation"></div>
+                            </div>	
+                
+                            <div class="form-group">
+                            <p>Doctor's Name <span>*</span></p>	
+                            <span class="icon-case"><i class="fa fa-info" style="font-size:25px"></i></span>
+                                <input type="text" name="phone" id="phone" data-rule="maxlen:10" data-msg="Vérifiez votre saisie sur les champs : Le champ 'Téléphone' doit être renseigné. Minimum 10 chiffres"/>
+                                <div class="validation"></div>
+                            </div>
+
+                        <div class="form-group">
+                            <p style="margin-top:8px; margin-bottom: 10px;">Upload Patient's Covid Positive Report <span>*</span></p>	
+                              <input type="file" id="reportFile" name="reportfilename" style="border: #ffffff; width: 80%; padding-top: 10px;" hidden>
+                              <label class="nof" for="reportFile">Choose File</label>  
+                              <br> 
+                              <div class="validation"></div>
+                            </div>
+                        
+                            <div class="form-group">
+                              <p style="margin-top:8px; margin-bottom: 10px;">Upload Doctor's Prescription <span>*</span></p>	
+                                <input type="file" id="prescriptionfile" name="prescriptionfilename" style="border: #ffffff; width: 80%; padding-top: 10px;" hidden>
+                                <label class="nof" for="prescriptionfile">Choose File</label> 
+                                <br>
+                                 <div class="validation"></div>
+                              </div>	
+                       
           </div>
           </div>
       <button type="submit" class="bouton-contact">Send</button>
