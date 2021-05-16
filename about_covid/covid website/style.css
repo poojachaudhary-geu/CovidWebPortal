@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
 
 :root{
-    --red:#FF4F5B;
+    --red: #108a8a;
 }
 
 *{
@@ -15,7 +15,7 @@
 }
 
 *::selection{
-    background:var(--red);
+    background:var(--green);
     color:#fff;
 }
 
@@ -37,15 +37,15 @@ html::-webkit-scrollbar-thumb{
 }
 
 body{
-    background:#f9f9f9;
+    background:#def5f5;
 }
 
 section{
-    min-height: 100vh;
+    min-height: 91vh;
     padding:0 7%;
     padding-top: 9rem;
 }
-
+ 
 .btn{
     display: inline-block;
     margin-top: 1rem;
@@ -57,6 +57,7 @@ section{
     position: relative;
     z-index: 0;
     font-size: 1.7rem;
+    margin-left: 12px;
 }
 
 .btn::before{
@@ -149,7 +150,11 @@ header .navbar ul li a:hover{
 }
 
 .home .image img{
-    width:100%;
+    width: 100%;
+    margin-left: 16px;
+    opacity: 0.9;
+    border-radius: 50px;
+    height: 300px;
 }
 
 .home .content{
@@ -162,12 +167,12 @@ header .navbar ul li a:hover{
 }
 
 .home .content h3{
-    color:#666;
+    color:rgb(77, 76, 76);
     font-size: 5rem;
 }
 
 .home .content p{
-    color:#999;
+    color:rgb(92, 92, 92);
     font-size: 2rem;
     padding:1rem 0;
 }
@@ -278,7 +283,6 @@ header .navbar ul li a:hover{
 
 .prevent .row .image img{
     height:100%;
-    width:100%;
     object-fit: cover;
 }
 
@@ -316,9 +320,18 @@ header .navbar ul li a:hover{
     flex-wrap: wrap;
 }
 
+.handwash .box-container .box a
+{
+    font-size: 18px;
+    font-weight: 900;
+    color: #108A8A;
+}
+
 .handwash .box-container .box{
-    background:#fff;
-    border:.1rem solid rgba(0,0,0,.1);
+    background:rgb(222,245,245);
+    border:.1rem solid rgba(0,0,0,.7);
+    border-radius: 15px;
+    box-shadow: 7px 7px 5px #888888;
     margin:2rem;
     margin-top: 3rem;
     padding:2rem 3.5rem;
@@ -348,7 +361,6 @@ header .navbar ul li a:hover{
     background:var(--red);
     border-radius: 5rem;
 }
-
 .spread .heading{
     text-align: center;
     padding:1rem;
@@ -361,7 +373,13 @@ header .navbar ul li a:hover{
     background-size: cover;
     background-position: center;
 }
-
+.sites{
+    float: left;
+}
+.sites p{
+    padding: 20px 0px;
+    font-size: xx-large;
+}
 .footer{
     min-height: auto;
     padding-top: 0;
